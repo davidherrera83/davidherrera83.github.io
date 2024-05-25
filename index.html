@@ -58,7 +58,7 @@
                         <div class="row" test-id="section-two-rows">
                             <!-- Harmonizing Ambitions -->
                             <article class="col-6 col-12-xsmall work-item" test-id="article-harmonizing-ambitions">
-                                <a href="https://docs.google.com/presentation/d/1FJmyNvnuk88ZXMTaU0EeNQVXvrVTGKLdOko8IdVn53k/edit?usp=sharing" class="image fit thumb" test-id="harmonizing-ambitions" target="_blank" rel="noopener noreferrer">
+                                <a href="https://docs.google.com/presentation/d/1FJmyNvnuk88ZXMTaU0EeNQVXvrVTGKLdOko8IdVn53k/edit?usp=sharing" class="image fit thumb no-poptrox" test-id="harmonizing-ambitions" target="_blank" rel="noopener noreferrer">
                                     <img src="images/thumbs/drive_01.png" alt="" test-id="harmonizing-ambitions-image" />
                                 </a>
                                 <p test-id="harmonizing-ambitions-description">Provides actionable steps to align personal career aspirations with company objectives. Explore strategies for mutual growth, professional development, and effective teamwork to achieve organizational success.</p>
@@ -129,32 +129,29 @@
         </div>
     </footer>
 
-        <!-- Scripts -->
-            <script src="assets/js/jquery.min.js"></script>
-            <script src="assets/js/jquery.poptrox.min.js"></script>
-            <script src="assets/js/browser.min.js"></script>
-            <script src="assets/js/breakpoints.min.js"></script>
-            <script src="assets/js/util.js"></script>
-            <script src="assets/js/main.js"></script>
-            <script>
-                $(document).ready(function() {
-                    $('#main').poptrox({
-                        usePopupCaption: true,
-                        usePopupNav: true,
-                        popupCloserText: '',
-                        popupLoaderText: '',
-                        usePopupDefaultStyling: false,
-                        overlayColor: '#000000',
-                        overlayOpacity: 0.75,
-                        popupSpeed: 300,
-                        fadeSpeed: 300,
-                    });
-                    $('a[target="_blank"]').on('click', function(e) {
-                        e.preventDefault();
-                        window.open($(this).attr('href'), '_blank');
-                    });
-                });
-            </script>
-
-    </body>
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.poptrox.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Initialize Poptrox for the elements that should use the lightbox
+            $('#main').poptrox({
+                usePopupCaption: true,
+                usePopupNav: true,
+                popupCloserText: '',
+                popupLoaderText: '',
+                usePopupDefaultStyling: false,
+                overlayColor: '#000000',
+                overlayOpacity: 0.75,
+                popupSpeed: 300,
+                fadeSpeed: 300,
+                selector: 'a:not(.no-poptrox)' // Exclude the specific link from Poptrox
+            });
+        });
+    </script>
+</body>
 </html>
