@@ -11,13 +11,13 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
         <link rel="stylesheet" href="assets/css/main.css" />
-        <link rel="stylesheet" href="assets//css/fontawesome-all.min.css" />
+        <link rel="stylesheet" href="assets/css/fontawesome-all.min.css" />
         <link rel="icon" href="images/david-bowie.png" />
         <style>
             .icon svg {
                 width: 1.5em;
-                height: 3em;
-                vertical-align: middle;
+                height: 1.5em;
+                vertical-align: sub;
                 fill: currentColor;
             }
         </style>
@@ -59,7 +59,7 @@
                         <div class="row" test-id="section-two-rows">
                             <!-- Harmonizing Ambitions -->
                             <article class="col-6 col-12-xsmall work-item" test-id="article-harmonizing-ambitions">
-                                <a href="https://docs.google.com/presentation/d/1FJmyNvnuk88ZXMTaU0EeNQVXvrVTGKLdOko8IdVn53k/edit?usp=sharing" class="image fit thumb" test-id="harmonizing-ambitions" target="_blank">
+                                <a href="https://docs.google.com/presentation/d/1FJmyNvnuk88ZXMTaU0EeNQVXvrVTGKLdOko8IdVn53k/edit?usp=sharing" class="image fit thumb" test-id="harmonizing-ambitions" target="_blank" rel="noopener noreferrer">
                                     <img src="images/thumbs/drive_01.png" alt="" test-id="harmonizing-ambitions-image" />
                                 </a>
                                 <p test-id="harmonizing-ambitions-description">Provides actionable steps to align personal career aspirations with company objectives. Explore strategies for mutual growth, professional development, and effective teamwork to achieve organizational success.</p>
@@ -82,7 +82,7 @@
                                 <h3 test-id="peaceful-pathway-title">
                                     <a href="https://www.peaceful-pathway.com">Peaceful Pathway</a>
                                 </h3>
-                                <p test-id="peaceful-pathway-description">A commissioned project for a small wellness store, focusing on reflexoloy & energy work.</p>
+                                <p test-id="peaceful-pathway-description">A commissioned project for a small wellness store, focusing on reflexology & energy work.</p>
                             </article>
                             <!-- Starting an Automation Team From Scratch -->
                             <article class="col-6 col-12-xsmall work-item" test-id="article-automation-team">
@@ -109,33 +109,6 @@
                                         <div class="col-6 col-12-xsmall"><input type="text" name="name" id="name" placeholder="Name" test-id="name-input" /></div>
                                         <div class="col-6 col-12-xsmall"><input type="email" name="email" id="email" placeholder="Email" test-id="email-input" /></div>
                                         <div class="col-12"><textarea name="message" id="message" placeholder="Message" rows="4" test-id="message-textarea"></textarea></div>
-                                    </div>
-                                    <ul class="actions" test-id="form-actions">
-                                        <li><input type="submit" class="button" value="Send Message" test-id="send-message-button" /></li>
-                                    </ul>
-                                </form>
-                            </div>
-                            <div class="col-4 col-12-small" test-id="section-three-info-col">
-                                <ul class="labeled-icons" test-id="contact-info">
-                                    <li test-id="address-info">
-                                        <h3 class="icon solid fa-home" test-id="address-icon"><span class="label">Address</span></h3>
-                                        2099 West 125 South<br />
-                                        Lehi, UT 84043<br />
-                                        United States
-                                    </li>
-                                    <li test-id="phone-info">
-                                        <h3 class="icon solid fa-mobile-alt" test-id="phone-icon"><span class="label">Phone</span></h3>
-                                        385-268-1173
-                                    </li>
-                                    <li test-id="email-info">
-                                        <h3 class="icon solid fa-envelope" test-id="email-icon"><span class="label">Email</span></h3>
-                                        <a href="#" test-id="email-link">david.herrera83@gmail.com</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </section>
-            </div>
 
      <!-- Footer -->
      <footer id="footer" test-id="footer">
@@ -160,6 +133,24 @@
             <script src="assets/js/breakpoints.min.js"></script>
             <script src="assets/js/util.js"></script>
             <script src="assets/js/main.js"></script>
+            <script>
+                $(document).ready(function() {
+                    $('#main').poptrox({
+                        usePopupCaption: true,
+                        usePopupNav: true,
+                        popupCloserText: '',
+                        popupLoaderText: '',
+                        usePopupDefaultStyling: false,
+                        overlayColor: '#000000',
+                        overlayOpacity: 0.75,
+                        popupSpeed: 300,
+                        fadeSpeed: 300,
+                    });
+                    $('a[target="_blank"]').on('click', function(e) {
+                        e.stopPropagation();
+                    });
+                });
+            </script>
 
     </body>
 </html>
