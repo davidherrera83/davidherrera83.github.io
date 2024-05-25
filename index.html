@@ -52,7 +52,6 @@
                         </div>
                     </section>
 
-
                 <!-- Two -->
                     <section id="two" test-id="section-two">
                         <h2 test-id="section-two-title">Recent Work</h2>
@@ -106,9 +105,13 @@
                             <div class="col-8 col-12-small" test-id="section-three-form-col">
                                 <form method="post" action="https://formspree.io/f/xoqzvzgj" test-id="contact-form">
                                     <div class="row gtr-uniform gtr-50" test-id="form-inputs">
-                                        <div class="col-6 col-12-xsmall"><input type="text" name="name" id="name" placeholder="Name" test-id="name-input" /></div>
-                                        <div class="col-6 col-12-xsmall"><input type="email" name="email" id="email" placeholder="Email" test-id="email-input" /></div>
-                                        <div class="col-12"><textarea name="message" id="message" placeholder="Message" rows="4" test-id="message-textarea"></textarea></div>
+                                        <div class="col-6 col-12-xsmall"><input type="text" name="name" id="name" placeholder="Name" test-id="name-input" autocomplete="name" /></div>
+                                        <div class="col-6 col-12-xsmall"><input type="email" name="email" id="email" placeholder="Email" test-id="email-input" autocomplete="email" /></div>
+                                        <div class="col-12"><textarea name="message" id="message" placeholder="Message" rows="4" test-id="message-textarea" autocomplete="on"></textarea></div>
+                                    </div>
+                                    <ul class="actions" test-id="form-actions">
+                                        <li><input type="submit" class="button" value="Send Message" test-id="send-message-button" /></li>
+                                  
 
      <!-- Footer -->
      <footer id="footer" test-id="footer">
@@ -147,7 +150,8 @@
                         fadeSpeed: 300,
                     });
                     $('a[target="_blank"]').on('click', function(e) {
-                        e.stopPropagation();
+                        e.preventDefault();
+                        window.open($(this).attr('href'), '_blank');
                     });
                 });
             </script>
