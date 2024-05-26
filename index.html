@@ -161,6 +161,7 @@
             <script src="assets/js/main.js"></script>
             <script>
                 $(document).ready(function() {
+                    // Initialize Poptrox for the elements that should use the lightbox
                     $('#main').poptrox({
                         usePopupCaption: true,
                         usePopupNav: true,
@@ -171,9 +172,10 @@
                         overlayOpacity: 0.75,
                         popupSpeed: 300,
                         fadeSpeed: 300,
-                        selector: 'a:not(.no-poptrox)'
+                        selector: 'a:not(.no-poptrox)' // Exclude the specific link from Poptrox
                     });
 
+                    // Handle links with the no-poptrox class
                     $('a.no-poptrox').on('click', function(e) {
                         e.stopPropagation();
                         window.open($(this).attr('href'), '_blank', 'noopener,noreferrer');
