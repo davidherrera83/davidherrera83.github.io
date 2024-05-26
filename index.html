@@ -145,4 +145,41 @@
                     <li><a href="https://www.linkedin.com/in/davidherrera83/" class="icon brands fab fa-linkedin" test-id="linkedin-link"><span class="label">LinkedIn</span></a></li>
                     <li><a href="mailto:david.herrera83@gmail.com" class="icon solid fas fa-envelope" test-id="email-footer-link"><span class="label">Email</span></a></li>
                 </ul>
-               
+                <ul class="copyright" test-id="copyright-info">
+                    <li>&copy; 2024 David Herrera</li>
+                    <li>Design: <a href="http://html5up.net" test-id="html5up-link">HTML5 UP</a></li>
+                </ul>
+            </div>
+        </footer>
+
+        <!-- Scripts -->
+            <script src="assets/js/jquery.min.js"></script>
+            <script src="assets/js/jquery.poptrox.min.js"></script>
+            <script src="assets/js/browser.min.js"></script>
+            <script src="assets/js/breakpoints.min.js"></script>
+            <script src="assets/js/util.js"></script>
+            <script src="assets/js/main.js"></script>
+            <script>
+                $(document).ready(function() {
+                    $('#main').poptrox({
+                        usePopupCaption: true,
+                        usePopupNav: true,
+                        popupCloserText: '',
+                        popupLoaderText: '',
+                        usePopupDefaultStyling: false,
+                        overlayColor: '#000000',
+                        overlayOpacity: 0.75,
+                        popupSpeed: 300,
+                        fadeSpeed: 300,
+                        selector: 'a:not(.no-poptrox)'
+                    });
+
+                    $('a.no-poptrox').on('click', function(e) {
+                        e.stopPropagation();
+                        window.open($(this).attr('href'), '_blank', 'noopener,noreferrer');
+                    });
+                });
+            </script>
+
+    </body>
+</html>
