@@ -58,7 +58,7 @@
                         <div class="row" test-id="section-two-rows">
                             <!-- Harmonizing Ambitions -->
                             <article class="col-6 col-12-xsmall work-item" test-id="article-harmonizing-ambitions">
-                                <a href="https://docs.google.com/presentation/d/1FJmyNvnuk88ZXMTaU0EeNQVXvrVTGKLdOko8IdVn53k/edit?usp=sharing" class="image fit thumb" test-id="harmonizing-ambitions" target="_blank" rel="noopener noreferrer">
+                                <a href="https://docs.google.com/presentation/d/1FJmyNvnuk88ZXMTaU0EeNQVXvrVTGKLdOko8IdVn53k/edit?usp=sharing" class="image fit thumb no-poptrox" test-id="harmonizing-ambitions" target="_blank" rel="noopener noreferrer">
                                     <img src="images/thumbs/drive_01.png" alt="" test-id="harmonizing-ambitions-image" />
                                 </a>
                                 <p test-id="harmonizing-ambitions-description">Provides actionable steps to align personal career aspirations with company objectives. Explore strategies for mutual growth, professional development, and effective teamwork to achieve organizational success.</p>
@@ -111,7 +111,30 @@
                                     </div>
                                     <ul class="actions" test-id="form-actions">
                                         <li><input type="submit" class="button" value="Send Message" test-id="send-message-button" /></li>
-                                  
+                                    </ul>
+                                </form>
+                            </div>
+                            <div class="col-4 col-12-small" test-id="section-three-info-col">
+                                <ul class="labeled-icons" test-id="contact-info">
+                                    <li test-id="address-info">
+                                        <h3 class="icon solid fa-home" test-id="address-icon"><span class="label">Address</span></h3>
+                                        2099 West 125 South<br />
+                                        Lehi, UT 84043<br />
+                                        United States
+                                    </li>
+                                    <li test-id="phone-info">
+                                        <h3 class="icon solid fa-mobile-alt" test-id="phone-icon"><span class="label">Phone</span></h3>
+                                        385-268-1173
+                                    </li>
+                                    <li test-id="email-info">
+                                        <h3 class="icon solid fa-envelope" test-id="email-icon"><span class="label">Email</span></h3>
+                                        <a href="#" test-id="email-link">david.herrera83@gmail.com</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+            </div>
 
      <!-- Footer -->
      <footer id="footer" test-id="footer">
@@ -148,10 +171,7 @@
                         overlayOpacity: 0.75,
                         popupSpeed: 300,
                         fadeSpeed: 300,
-                    });
-                    $('a[target="_blank"]').on('click', function(e) {
-                        e.preventDefault();
-                        window.open($(this).attr('href'), '_blank');
+                        selector: 'a:not(.no-poptrox)' // Exclude the specific link from Poptrox
                     });
                 });
             </script>
